@@ -1,0 +1,40 @@
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__map-image {
+    height: auto;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 15px;
+    @include mediaSmartphone {
+      padding: 60px;
+    }
+  }
+
+  &__title:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__description:not(:last-child) {
+    margin-bottom: 37px;
+
+    @include mediaSmartphone {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+  }
+
+  @include mediaTablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

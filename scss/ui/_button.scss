@@ -1,0 +1,52 @@
+.button {
+  display: inline-flex;
+  height: 38px;
+  align-items: center;
+  padding-inline: 26px;
+  background-color: $white;
+  color: $black;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  border-radius: $border-radius;
+  &:hover {
+    background-color: $accent;
+  }
+
+  @include mediaSmartphone {
+    padding-inline: 18px;
+  }
+
+  &.transparent {
+    position: relative;
+    height: $input-higth;
+    padding-left: 31px;
+    padding-right: 80px;
+    background-color: transparent;
+    border: $border;
+    color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 100%;
+      aspect-ratio: 1;
+      background: url("../../icons/button-arrow.svg") center/contain no-repeat;
+      border: $border;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      color: $black;
+      background-color: $light-gray;
+    }
+  }
+}
+.transparent {
+}

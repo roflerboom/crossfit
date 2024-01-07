@@ -1,0 +1,128 @@
+.motivation {
+  // .motivation__list
+
+  &__list {
+  }
+
+  // .motivation__item
+
+  // .motivation__card,
+  // .motivation__item:nth-child(even) .motivation__card {
+  //   flex-direction: column-reverse;
+  // }
+
+  &__item {
+  }
+  &__item:nth-child(even) {
+    background-color: $gray-bg;
+  }
+  &__item:nth-child(even) &__card {
+    flex-direction: row-reverse;
+  }
+  // .motivation__card
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: clamp(30px, 10.42vw, 200px);
+
+    &-body {
+      padding-left: 35px;
+    }
+    @include mediaTablet {
+      padding-block: 50px;
+    }
+    @include mediaSmartphone {
+      row-gap: 30px;
+      padding-block: 30px;
+    }
+  }
+
+  // @media (max-width: ) {
+  // }
+  // ERROR 2638
+  @include mediaSmartphone {
+    padding-block: 50px;
+
+    &__card,
+    &__item:nth-child(even) &__card {
+      flex-direction: column-reverse;
+    }
+  }
+  &__card-image {
+    margin-block: -60px;
+    @include mediaTablet {
+      max-width: 40%;
+      height: auto;
+      margin-block: 0;
+    }
+    @include mediaSmartphone {
+      min-width: 60%;
+    }
+  }
+  // .motivation__card-title
+
+  &__card-title {
+  }
+  &__card-title:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  // .motivation__card-description
+
+  &__card-description {
+    max-width: 400px;
+  }
+  &__card-description:not(:last-child) {
+    margin-bottom: 37px;
+    @include mediaSmartphone {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1919px) {
+    &__card-image {
+      margin-block: -20px;
+    }
+  }
+}
+
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(100% + 8px);
+    width: 26px;
+    aspect-ratio: 1;
+    background: url("../../icons/plus.svg") center/contain no-repeat;
+  }
+
+  &::after {
+    content: attr(data-title);
+
+    position: absolute;
+    z-index: -1;
+    top: -0.4em;
+    left: -0.6em;
+    color: transparent;
+    -webkit-text-stroke: 1px $dark-gray;
+    text-stroke: 1px $dark-gray;
+
+    font-size: 2.8em;
+    font-family: $accent-font;
+  }
+
+  &.centered::after {
+    top: -0.3em;
+    left: 50%;
+    translate: -50% 0;
+    line-height: 1;
+  }
+}
+
+.transparent {
+}

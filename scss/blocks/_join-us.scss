@@ -1,0 +1,124 @@
+.join-us {
+  background-color: $gray-bg;
+  &__video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("../../images/join-us/join-us-bg-image.jpg") center/cover no-repeat $gray-bg;
+    padding: 150px 30px;
+
+    @include mediaSmartphone {
+      padding: 100px 30px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+  }
+
+  &__play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+    width: 200px;
+    aspect-ratio: 1;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    @include mediaSmartphone {
+      width: 130px;
+    }
+
+    border: $border;
+    border-radius: 50%;
+    &::after {
+      content: "";
+      width: 26px;
+      // height: 26px;
+      aspect-ratio: 1;
+      background: url("../../icons/arrow-top-right.svg") center/contain no-repeat;
+      transition: $transition-duration;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+    &:hover::after {
+      filter: invert(1);
+    }
+  }
+
+  &__body {
+    padding-bottom: 150px;
+  }
+
+  &__title {
+    position: relative;
+    margin-top: -0.4em;
+    font-size: clamp(64px, 9.37vw, 180px);
+    line-height: 1;
+    text-align: center;
+
+    &::after {
+      margin-left: 0.14em;
+      content: "";
+      display: inline-block;
+      height: 0.7em;
+      aspect-ratio: 1;
+      background: url("../../icons/bold-arrow-down-right.svg") center/contain no-repeat;
+      scale: 1 -1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 130px;
+      @include mediaSmartphone {
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  &__form {
+  }
+
+  &__form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form-title {
+  }
+
+  &__form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    @include mediaSmartphone {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+    }
+  }
+
+  &__form-input {
+    max-width: 400px;
+  }
+
+  &__button {
+  }
+}
