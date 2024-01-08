@@ -8,6 +8,13 @@ body {
   line-height: 1.75;
   font-weight: 300;
 }
+
+svg *[fill] {
+  fill: currentColor;
+}
+svg *[stroke] {
+  stroke: currentColor;
+}
 a {
   color: $white;
   text-decoration: none;

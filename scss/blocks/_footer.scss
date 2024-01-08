@@ -1,0 +1,198 @@
+.footer {
+  // .footer_address
+
+  &_address {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  // .footer__main
+
+  &__main {
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+
+  // .footer__main-inner
+
+  &__main-inner {
+  }
+
+  // .footer__header
+  &__header,
+  &__body {
+    display: grid;
+    column-gap: 62px;
+  }
+  &__header {
+    grid-template-columns: $footer-logo-width auto;
+  }
+  &__header:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  // .footer__logo
+
+  &__logo {
+  }
+
+  // .footer__logo-img
+
+  &__logo-img {
+  }
+
+  // .footer__description
+
+  &__description {
+    text-align: left;
+  }
+
+  // .footer__body
+
+  &__body {
+    grid-template-columns: $footer-logo-width repeat(3, 1fr);
+  }
+
+  // .footer__culomn
+
+  &__culomn {
+  }
+
+  // .footer__culomn-title
+
+  &__culomn-title {
+    font-size: clamp(18px, 1.15vw, 22px);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &.has-arrow::after {
+      content: "";
+      display: inline-block;
+      height: 0.74em;
+      margin-left: 0.5em;
+      aspect-ratio: 1;
+      background: url("../../icons/bold-arrow-down-right.svg") center/contain no-repeat;
+      scale: -1 1;
+    }
+  }
+
+  // .footer__about
+
+  &__about {
+  }
+
+  // .footer__schedule
+
+  &__schedule {
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+  }
+
+  // .footer__contacts-list
+
+  &__contacts-list {
+  }
+
+  // .footer__contacts-item
+
+  &__contacts-item {
+  }
+
+  // .footer__contacts-link
+
+  &__contacts-link {
+  }
+
+  // .footer__subscribe
+
+  &__subscribe {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  // .footer__subscribe-input
+
+  &__subscribe-input {
+    padding-right: 70px;
+  }
+
+  // .footer__subscribe-button
+
+  &__subscribe-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1;
+    background: url("../../icons/button-arrow.svg") center/contain no-repeat;
+
+    border: 1px solid $dark-gray;
+    border-radius: $border-radius;
+
+    &:hover {
+      border: $border;
+    }
+  }
+
+  // .footer__soc1als
+
+  &__soc1als {
+  }
+
+  // .footer__soc1als-list
+
+  &__soc1als-list {
+    display: flex;
+    column-gap: 18px;
+  }
+
+  // .footer__soc1als-item
+
+  &__soc1als-item {
+  }
+
+  // .footer__soc1als-link
+
+  &__soc1als-link {
+    display: flex;
+
+    width: 23px;
+  }
+
+  // .footer__extra
+
+  &__extra {
+    padding-block: 15px;
+    background-color: $dark-gray;
+  }
+
+  // .footer__extra-inner
+
+  &__extra-inner {
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    font-size: 14px;
+  }
+}
+.has-arrow {
+}
+.visually-hidden {
+}
+.input {
+}
+.icon {
+}
+.flat-color {
+}
